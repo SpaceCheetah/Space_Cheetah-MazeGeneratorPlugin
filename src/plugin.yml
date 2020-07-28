@@ -1,0 +1,35 @@
+main: space.mazegenerator.MazeGeneratorPlugin
+version: 1.0
+name: MazeGenerator
+author: Space_Cheetah
+description: A basic maze generator plugin
+softdepend: [CommandAPI]
+permissions:
+    mazegenerator.*:
+        description: maze generator master perm
+        default: false
+        children:
+            mazegenerator.genmaze: true
+            mazegenerator.overridelimit: true
+            mazegenerator.genmaze3d: true
+            mazegenerator.help: true
+            mazegenerator.areaeffect: true
+            mazegenerator.world.*: true
+    mazegenerator.areaeffect:
+        description: required to apply area effects
+        default: op
+    mazegenerator.genmaze:
+        description: required to generate 2d mazes
+        default: op
+    mazegenerator.genmaze3d:
+        description: required to generate 3d mazes
+        default: op
+    mazegenerator.world.*:
+        description: perm to allow running mazegenerator commands in any world (mazegenerator.world.<world> for specific world)
+        default: op
+    mazegenerator.overridelimit:
+        description: required to override the limits set in config
+        default: false
+    mazegenerator.help:
+        description: required to view the index help topic for maze generator
+        default: op

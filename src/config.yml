@@ -1,0 +1,8 @@
+#Maze size limits (overridden by the perm mazegenerator.overridelimit). Set to -1 to not limit.
+limits:
+    x: -1
+    y: -1
+    z: -1
+#Allotted lag per tick (in milliseconds) while placing a maze (note that each maze will have this much lag per tick).
+#Set to -1 to not limit.
+lag-per-tick: 20
